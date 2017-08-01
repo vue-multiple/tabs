@@ -1,0 +1,101 @@
+.@{css-prefix}tabs {
+  &__header {
+	position: relative;
+	padding: 0;
+	margin: 0 0 15px;
+	border-bottom: @nav-bar-height solid @primary-color;
+  }
+
+  &__active {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	transition: transform .3s cubic-bezier(.645, .045, .355, 1);
+	&.is-line {
+	  height: 3px;
+	  background-color: @primary-color;
+	}
+	&.is-triangle {
+	  &:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom-color: @primary-color;
+		transform: translateX(-50%);
+	  }
+	}
+  }
+
+  &__nav-wrap {
+	position: relative;
+	margin-bottom: -@nav-bar-height;
+	overflow: hidden;
+  }
+
+  &__nav-title {
+	float: left;
+	font-size: 18px;
+	line-height: @nav-height;
+	color: @primary-color;
+	font-weight: bold;
+  }
+
+  &__nav-more {
+	float: right;
+	font-size: 12px;
+	line-height: @nav-height;
+	color: @primary-color;
+	cursor: pointer;
+  }
+
+  &__nav-more-icon {
+	margin-left: 6px;
+  }
+
+  &__nav-scroll {
+	float: left;
+	overflow: hidden;
+  }
+
+  &__nav {
+	position: relative;
+	float: left;
+	transition: transform .3s;
+	white-space: nowrap;
+  }
+
+  &__item {
+	position: relative;
+	display: inline-block;
+	height: @nav-height;
+	line-height: @nav-height;
+	padding: 0 24px 0 0;
+	font-size: 14px;
+	color: @nav-item-color;
+	box-sizing: border-box;
+
+	&:hover {
+	  color: @primary-color;
+	  cursor: pointer;
+	}
+
+	&.is-disabled {
+	  color: @nav-item-disabled-color;
+	  cursor: default;
+	}
+
+	&.is-active {
+	  color: @primary-color;
+	}
+  }
+
+  &__content {
+	position: relative;
+	overflow: hidden;
+  }
+}

@@ -1,0 +1,27 @@
+@tabs-icon-prefix-cls: ~"@{css-prefix}tabs-icon";
+
+@font-face {
+  font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1501554503876'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1501554503876#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/iconfont.woff?t=1501554503876') format('woff'), /* chrome, firefox */ url('../fonts/iconfont.ttf?t=1501554503876') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/iconfont.svg?t=1501554503876#iconfont') format('svg'); /* iOS 4.1- */
+}
+[class^="@{tabs-icon-prefix-cls}"], [class*=" @{tabs-icon-prefix-cls}"] {
+  font-family: "iconfont" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.@{tabs-icon-prefix-cls} {
+  &--more {
+	&:before {
+	  content: "\e675";
+	}
+  }
+}
